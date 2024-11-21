@@ -12,7 +12,7 @@
         logger.setLevel(INFO);  \
         char buf[1024] = {0};   \
         snprintf(buf, 1024, logmsgFormat, ##__VA_ARGS__);   \
-        Logger.log(buf);    \
+        logger.log(buf);    \
     }while(0)
 
 #define LOG_ERROR(logmsgFormat, ...) \
@@ -22,7 +22,7 @@
         logger.setLevel(ERROR);  \
         char buf[1024] = {0};   \
         snprintf(buf, 1024, logmsgFormat, ##__VA_ARGS__);   \
-        Logger.log(buf);    \
+        logger.log(buf);    \
     }while(0)
 
 #define LOG_FATAL(logmsgFormat, ...) \
@@ -32,7 +32,7 @@
         logger.setLevel(FATAL);  \
         char buf[1024] = {0};   \
         snprintf(buf, 1024, logmsgFormat, ##__VA_ARGS__);   \
-        Logger.log(buf);    \
+        logger.log(buf);    \
     }while(0)
 
 #ifdef MUDEBUG
@@ -43,7 +43,7 @@
         logger.setLevel(DEBUG);  \
         char buf[1024] = {0};   \
         snprintf(buf, 1024, logmsgFormat, ##__VA_ARGS__);   \
-        Logger.log(buf);    \
+        logger.log(buf);    \
     }while(0)
 #else
 #define LOG_DEBUG(logmsgFormat, ...)

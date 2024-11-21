@@ -15,7 +15,7 @@ void Logger::setLevel(int level){
 }
 
 // 写日志
-void log(const std::string &msg){
+void Logger::log(const std::string &msg){
     switch (loglevel_)
     {
     case INFO:
