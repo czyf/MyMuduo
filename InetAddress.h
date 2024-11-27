@@ -17,6 +17,9 @@ public:
     这种设计通常用在返回类中私有成员的指针时，以保护数据的完整性。
     */ 
     const sockaddr_in* getSockAddr() const { return &addr_; }
+
+    void setSockaddr(const sockaddr_in &addr) { addr_ = addr; }
+    
 private:
     sockaddr_in addr_;
 
