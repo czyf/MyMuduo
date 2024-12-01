@@ -21,7 +21,9 @@ Channel::~Channel()
 {
 }
 
-// channel的tie方法什么时候调用
+// channel的tie方法什么时候调用 TcpConnection => Channel 防止TcpConnection提前释放，channel调用
+// 相应回调无法调用
+// 一个TcpConnection新连接创建的时候，TcpConnection => Channel
 void Channel::tie(const std::shared_ptr<void>& obj){
     tie_ = obj;
     tied_ = true;
